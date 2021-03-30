@@ -1,0 +1,23 @@
+<p>employee-forms works modified!</p>
+
+<form [formGroup] = "employeeForm" (ngSubmit)="onSubmit()">
+
+  <div>
+    <label for="firstName">
+      First Name
+    </label>
+    <input id="firstName" type="firstName" formControlName="firstName">
+
+  </div>
+
+  <div>
+    <label for="lastName">
+      Last Name
+    </label>
+    <input id="lastName" type="lastName" formControlName="lastName">
+
+  </div>
+
+  <button class="button" type="submit" > Add Employee</button>
+
+</form>

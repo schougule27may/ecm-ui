@@ -1,0 +1,29 @@
+<p>employee works modified!</p>
+
+<a routerLink="employee-form" > Add Employee</a>
+<table class="employee">
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email Address</th>
+    <th>Active</th>
+    <th>Mobile</th>
+    <th>Nick Name</th>
+    <th>address</th>
+    <th>status</th>
+    <th>Short Desc</th>
+    <th>Key Tech Stack</th>
+  </tr>
+  <tr *ngFor="let employee of employees | async">
+    <td>{{employee.firstName}}</td>
+    <td>{{employee.lastName}}</td>
+    <td>{{employee.emailAddress}}   </td>
+    <td>{{employee.active}}</td>
+    <td>{{employee.countryCode}} - {{employee.mobile}}</td>
+    <td>{{employee.nickName}}</td>
+    <td>{{employee.address}} </td>
+    <td>{{employee.status}}</td>
+    <td>{{employee.shortDesc}}</td>
+    <td>{{employee.keyTechStack}}</td>
+  </tr>
+</table>
