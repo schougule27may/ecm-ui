@@ -9,24 +9,29 @@ import {RouterModule} from '@angular/router';
 import  {HttpClientModule} from '@angular/common/http';
 import { EmployeeComponent } from './employee/employee.component';
 import { TimesheetComponent } from './timesheet/timesheet.component';
+import { EmployeeFormsComponent } from './employee-forms/employee-forms.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClientComponent,
     EmployeeComponent,
-    TimesheetComponent
+    TimesheetComponent,
+    EmployeeFormsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
-      {path : '', component: ClientComponent},
-      {path : 'client', component: ClientComponent},
-      {path : 'employee', component: EmployeeComponent},
-      {path : 'timesheet', component: TimesheetComponent},
-    ])
+      {path: '', component: ClientComponent},
+      {path: 'client', component: ClientComponent},
+      {path: 'employee', component: EmployeeComponent},
+      {path: 'employee/employee-form', component: EmployeeFormsComponent},
+      {path: 'timesheet', component: TimesheetComponent},
+    ]),
   ],
   providers: [],
   bootstrap: [AppComponent]
