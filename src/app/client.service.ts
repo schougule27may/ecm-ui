@@ -9,16 +9,7 @@ export class ClientService {
   constructor(private http: HttpClient) {
   }
   getClients() {
-    console.log('Hey there modified');
-    let  clients = [];
-    let client = {
-      clientId: 1,
-      fistName: 'sandeep'
-    };
-    clients.push(client);
-   // return this.http.get<ClientData[]> ('http://c7c2a1a6d54f.ngrok.io/clients');
-    return clients;
-    console.log('Hey there done');
+    return this.http.get<ClientData[]> ('http://localhost:7979/clients');
   }
 
 }

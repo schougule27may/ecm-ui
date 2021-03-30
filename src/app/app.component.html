@@ -5,20 +5,34 @@
 </head>
 <body>
 
-<div class="content" role="main">
-
-
-
-  <!-- Resources -->
+<header>
   <h2>ECM Project</h2>
-  <p>Modified Data</p>
+</header>
 
-  <div class="card-container">
+<section>
+  <nav>
+    <ul>
+      <li>
+        <a routerLink="/client"><h3>Client</h3></a>
+      </li>
+      <li>
+        <a routerLink="/employee"><h3>Employee</h3></a>
+      </li>
+      <li>
+        <a routerLink="/timesheet"><h3>Timesheet</h3></a>
+      </li>
+    </ul>
+  </nav>
+  <article>
+    <h1>Components</h1>
     <router-outlet></router-outlet>
-  </div>
+  </article>
 
+</section>
 
+<footer>
+  <p>FCM Copyright @2021 Inc</p>
+</footer>
 
-</div>
 </body>
 </html>
