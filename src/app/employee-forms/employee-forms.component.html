@@ -1,4 +1,4 @@
-<p>employee-forms works modified!</p>
+
 
 <form [formGroup] = "employeeForm" (ngSubmit)="onSubmit()">
 
@@ -6,7 +6,7 @@
     <label for="firstName">
       First Name
     </label>
-    <input id="firstName" type="firstName" formControlName="firstName">
+    <input id="firstName" type="text" formControlName="firstName">
 
   </div>
 
@@ -14,7 +14,65 @@
     <label for="lastName">
       Last Name
     </label>
-    <input id="lastName" type="lastName" formControlName="lastName">
+    <input id="lastName" type="text" formControlName="lastName">
+
+  </div>
+
+  <div>
+    <label for="emailAddress">
+      Email Address
+    </label>
+    <input id="emailAddress" type="email" formControlName="emailAddress">
+
+  </div>
+
+  <div>
+    <label>
+      Status
+    </label>
+    <input name="active"  type="radio" value="true" formControlName="active"> Active
+    <input name="active" type="radio" value="false" formControlName="active"> In Active
+
+  </div>
+
+  <div>
+    <label for="countryCode">
+      Mobile
+    </label>
+      <input id="countryCode" type="number" formControlName="countryCode">
+    <input id="mobile" type="number" formControlName="mobile">
+  </div>
+
+  <div>
+    <label for="address">
+      Address
+    </label>
+      <textarea cols="40" rows="6" id="address" name="address" formControlName="address"></textarea>
+
+  </div>
+
+  <div>
+    <label for="nickName">
+      Nick Name
+    </label>
+    <input id="nickName" type="text" formControlName="nickName">
+
+  </div>
+
+
+  <div>
+    <label for="shortDesc">
+      Short Desc
+    </label>
+    <textarea id="shortDesc" formControlName="shortDesc"></textarea>
+
+  </div>
+
+  <div>
+    <label for="keyTechStack">
+      Key Tech Stack
+    </label>
+    <textarea id="keyTechStack" formControlName="keyTechStack"></textarea>
 
   </div>
 

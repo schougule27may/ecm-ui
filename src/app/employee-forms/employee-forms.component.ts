@@ -15,7 +15,15 @@ export class EmployeeFormsComponent implements OnInit {
               { }
   employeeForm = this.formBuilder.group({
     firstName: '',
-    lastName: ''
+    lastName: '',
+    emailAddress: '',
+    active: '',
+    countryCode: '',
+    mobile: '',
+    address: '',
+    nickName: '',
+    shortDesc: '',
+    keyTechStack: ''
   });
 
   ngOnInit(): void {
