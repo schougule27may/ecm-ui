@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input} from '@angular/core';
 import {ClientService} from '../client.service';
+import {ClientData} from '../client.data';
 
 @Component({
   selector: 'app-client',
@@ -8,10 +9,15 @@ import {ClientService} from '../client.service';
 })
 export class ClientComponent implements OnInit {
 
+
+
   constructor(private clientService: ClientService) { }
   clients = this.clientService.getClients();
-
+  selectedData?: ClientData;
   ngOnInit(): void {
+  }
+  onSelect(client: ClientData): void {
+    this.selectedData = client;
   }
 
 }

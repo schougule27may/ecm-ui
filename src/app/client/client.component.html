@@ -4,7 +4,7 @@
 
 
 
- <table border="1" >
+ <table class="client" >
      <tr>
        <th>First Name</th>
        <th>Last Name</th>
@@ -14,9 +14,14 @@
        <th>Nick Name</th>
        <th>Type</th>
      </tr>
-   <tr *ngFor="let client of clients | async">
-     <td>{{client.clientId}}</td>
+   <tr *ngFor="let client of clients | async" (click)="onSelect(client)">
+     <td>{{client.firstName}}</td>
+     <td> {{client.lastName}}</td>
      <td> {{client.emailAddress}}</td>
+     <td> {{client.active}}</td>
+     <td> {{client.countryCode}} - {{client.mobile}}</td>
+     <td> {{client.nickName}}</td>
+     <td> {{client.type}}</td>
    </tr>
 
 
@@ -24,3 +29,11 @@
 
  </table>
 
+
+<!-- <div *ngIf="selectedData">
+   {{selectedData.firstName}}
+   {{selectedData.lastName}}
+   {{selectedData.emailAddress}}
+ </div>-->
+
+ <app-client-form [client]="selectedData"></app-client-form>

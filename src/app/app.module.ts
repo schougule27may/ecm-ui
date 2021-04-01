@@ -11,6 +11,8 @@ import { EmployeeComponent } from './employee/employee.component';
 import { TimesheetComponent } from './timesheet/timesheet.component';
 import { EmployeeFormsComponent } from './employee-forms/employee-forms.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule} from '@angular/forms';
+import { ClientFormComponent } from './client-form/client-form.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,14 @@ import {ReactiveFormsModule} from '@angular/forms';
     EmployeeComponent,
     TimesheetComponent,
     EmployeeFormsComponent,
+    ClientFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule,
     RouterModule.forRoot([
       {path: '', component: ClientComponent},
       {path: 'client', component: ClientComponent},
