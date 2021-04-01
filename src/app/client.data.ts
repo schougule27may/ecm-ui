@@ -1,4 +1,10 @@
 export interface ClientData {
-  clientId: number;
   emailAddress: string;
+  firstName: string;
+  lastName: string;
+  active: boolean;
+  countryCode: number;
+  mobile: number;
+  nickName: string;
+  type: boolean;
 }

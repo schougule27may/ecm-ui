@@ -1,0 +1,36 @@
+<p>client-form works!</p>
+
+<H3>We'll use this component to load client data</H3>
+
+
+<div  *ngIf="client">
+  {{client.firstName | uppercase}}
+
+  <div>
+    <label for="firstName">
+      First Name
+    </label>
+    <input id="firstName" [(ngModel)]="client.firstName" placeholder="First Name">
+
+  </div>
+  <br/>
+  <div>
+    <label for="lastName">
+      Last Name
+    </label>
+    <input id="lastName" [(ngModel)]="client.lastName" placeholder="Last Name">
+
+  </div>
+  <br/>
+  <div>
+    <label for="emailAddress">
+      Email Address
+    </label>
+    <input id="emailAddress" [(ngModel)]="client.emailAddress" placeholder="Email Address">
+
+  </div>
+
+  <br/>
+  <br/>
+    <button type="button" (click)="saveClient(client)" > Save Client</button>
+</div>
