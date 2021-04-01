@@ -11,5 +11,10 @@ export class ClientService {
   getClients() {
     return this.http.get<ClientData[]> ('http://localhost:7979/clients');
   }
+  saveClientData(client: any) {
+      this.http.post<any>('http://localhost:7979/client', client).subscribe(data => {
+      console.log(data);
+    });
+  }
 
 }

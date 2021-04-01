@@ -5,13 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ClientComponent } from './client/client.component';
 import {RouterModule} from '@angular/router';
+import {FormsModule} from '@angular/forms';
 // tslint:disable-next-line:import-spacing
 import  {HttpClientModule} from '@angular/common/http';
 import { EmployeeComponent } from './employee/employee.component';
 import { TimesheetComponent } from './timesheet/timesheet.component';
 import { EmployeeFormsComponent } from './employee-forms/employee-forms.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import {FormsModule} from '@angular/forms';
+
 import { ClientFormComponent } from './client-form/client-form.component';
 
 @NgModule({
